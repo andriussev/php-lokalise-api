@@ -120,7 +120,7 @@ final class LokaliseApiResponseTest extends TestCase
         ]);
 
         try {
-            $guzzleResponse = $client->request('GET', null);
+            $guzzleResponse = $client->request('GET');
         } catch (RequestException $e) {
             $guzzleResponse = new Response($status, $headers, json_encode($body));
         } catch (GuzzleException $e) {
